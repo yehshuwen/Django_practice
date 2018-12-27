@@ -20,5 +20,9 @@ from sign import views  #匯入sign應用程式views檔
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^index/$',views.index), #新增index/路徑配置，看到網域後面出現/index/就去call views.py裡的函式index
-    url(r'^(\d{1,2})/plus/(\d{1,2})/$',views.add),
+    #url(r'^(\d{1,2})/plus/(\d{1,2})/$',views.add),
+    url(r'^login_action/$',views.login_action),
+    url(r'^event_manage/$',views.event_manage),
+    url(r'^$',views.index),
+    url(r'^accounts/login/$',views.index),
 ]
